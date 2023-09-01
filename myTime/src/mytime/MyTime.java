@@ -17,7 +17,7 @@ private int minutes;
 private int seconds;
 private boolean meridean;
 
-// Constructors
+
 public MyTime(int hours, int minutes, int seconds, boolean meridean){
 
     this.hours = hours;
@@ -26,7 +26,7 @@ public MyTime(int hours, int minutes, int seconds, boolean meridean){
     this.meridean = meridean;
 }
 
-// Setters and Getters
+
 public int getHours() {
     return hours;
 }
@@ -68,9 +68,8 @@ int totalMinutes = this.minutes + totalSeconds / 60;
     this.minutes = totalMinutes % 60;
 
 int totalHours = this.hours + totalMinutes / 60;
-    this.hours = totalHours % 12; // Assuming 12-hour format
+    this.hours = totalHours % 12; 
 
-// Adjust meridian if necessary
 if (totalHours >= 12) {
     this.meridean = !this.meridean;
     }
